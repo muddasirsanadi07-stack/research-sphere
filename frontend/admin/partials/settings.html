@@ -1,0 +1,116 @@
+<!-- Platform Settings View -->
+<div class="settings-container">
+    <div class="settings-header">
+        <h2>Settings</h2>
+        <p>Personalize your dashboard experience and manage account security.</p>
+    </div>
+
+    <!-- 1. Account Settings -->
+    <div class="settings-group">
+        <h3><i class="fa-solid fa-user-gear"></i> Account Profile</h3>
+        
+        <!-- Name -->
+        <div class="settings-item">
+            <div class="s-item-info">
+                <span class="s-item-label">Display Name</span>
+                <span class="s-item-desc">How your name appears on reports and the dashboard.</span>
+            </div>
+            <div class="s-item-control">
+                <input type="text" class="s-input" value="Demo Admin" id="settings-name">
+            </div>
+        </div>
+
+        <!-- Change Password -->
+        <div class="settings-item">
+            <div class="s-item-info">
+                <span class="s-item-label">Change Password</span>
+                <span class="s-item-desc">Update your login credentials regularly for security.</span>
+            </div>
+            <div class="s-item-control">
+                <button class="btn btn-outline" style="font-size: 0.85rem; padding: 8px 16px;">Update Password</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Institutional Defaults -->
+    <div class="settings-group">
+        <h3><i class="fa-solid fa-sliders"></i> Institutional Defaults</h3>
+
+        <!-- Default Year -->
+        <div class="settings-item">
+            <div class="s-item-info">
+                <span class="s-item-label">Default Academic Year</span>
+                <span class="s-item-desc">The year shown by default when you log in.</span>
+            </div>
+            <div class="s-item-control">
+                <select class="s-select">
+                    <option>2025-26</option>
+                    <option selected>2024-25</option>
+                    <option>2023-24</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Default Department -->
+        <div class="settings-item">
+            <div class="s-item-info">
+                <span class="s-item-label">Default Department</span>
+                <span class="s-item-desc">Filter analytics by this department automatically.</span>
+            </div>
+            <div class="s-item-control">
+                <select class="s-select">
+                    <option>Computer Science & Eng.</option>
+                    <option>Information Science</option>
+                    <option>Electronics & Comm.</option>
+                    <option>Mechanical Eng.</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Preferences & Interface -->
+    <div class="settings-group">
+        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Interface & Alerts</h3>
+
+        <!-- Theme Toggle -->
+        <div class="settings-item">
+            <div class="s-item-info">
+                <span class="s-item-label">Theme Mode</span>
+                <span class="s-item-desc">Toggle between Light and Dark interface styles.</span>
+            </div>
+            <div class="s-item-control">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Notifications Toggle -->
+        <div class="settings-item">
+            <div class="s-item-info">
+                <span class="s-item-label">System Notifications</span>
+                <span class="s-item-desc">Receive alerts for new verification requests.</span>
+            </div>
+            <div class="s-item-control">
+                <label class="switch">
+                    <input type="checkbox" checked id="notif-toggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Session -->
+    <div class="settings-group">
+        <div class="settings-item" style="border: none;">
+            <div class="s-item-info">
+                <span class="s-item-label" style="color: #EF4444;">End Session</span>
+                <span class="s-item-desc">Securely sign out of your ResearchSphere account.</span>
+            </div>
+            <div class="s-item-control">
+                <button class="btn-danger-text" onclick="handleLogout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            </div>
+        </div>
+    </div>
+</div>

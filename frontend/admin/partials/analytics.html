@@ -1,0 +1,235 @@
+<!-- Analytics Dashboard Content (RCPIE) -->
+<div class="analytics-content">
+    
+    <!-- Section 1: Summary Cards -->
+    <div class="summary-row">
+        <div class="summary-card perf-high">
+            <h2 id="total-target">1,250</h2>
+            <p>Total Target</p>
+        </div>
+        <div class="summary-card perf-mid">
+            <h2 id="total-achieved">984</h2>
+            <p>Total Achieved</p>
+        </div>
+        <div class="summary-card perf-low">
+            <h2 id="total-pending">266</h2>
+            <p>Total Pending</p>
+        </div>
+        <div class="summary-card perf-high">
+            <h2 id="overall-pct">78.7%</h2>
+            <p>Overall Achievement %</p>
+        </div>
+    </div>
+
+    <!-- Section 2 & 3: Main Visualizations -->
+    <div class="viz-grid">
+        <div class="viz-card">
+            <h3><i class="fa-solid fa-chart-bar"></i> Target vs Achievement (RCPIE)</h3>
+            <div class="chart-container">
+                <canvas id="rcpieBarChart"></canvas>
+            </div>
+        </div>
+        <div class="viz-card">
+            <h3><i class="fa-solid fa-ranking-star"></i> Department Ranking</h3>
+            <div class="chart-container">
+                <canvas id="deptRankChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 4: Achievement Percentage Heatmap -->
+    <div class="heatmap-card">
+        <h3><i class="fa-solid fa-table-cells"></i> Performance Heatmap (Dept-wise)</h3>
+        <div class="heatmap-scroll">
+            <div class="heatmap-grid" style="grid-template-columns: 140px repeat(7, 1fr);">
+                <!-- Header Row -->
+                <div class="heatmap-header">Dept.</div>
+                <div class="heatmap-header">R</div>
+                <div class="heatmap-header">C</div>
+                <div class="heatmap-header">P</div>
+                <div class="heatmap-header">I</div>
+                <div class="heatmap-header">E</div>
+                <div class="heatmap-header">M Paper</div>
+                <div class="heatmap-header">M Patent</div>
+
+                <!-- CSE -->
+                <div class="heatmap-cell cell-dept">CSE</div>
+                <div class="heatmap-cell status-green">110%</div>
+                <div class="heatmap-cell status-green">105%</div>
+                <div class="heatmap-cell status-yellow">85%</div>
+                <div class="heatmap-cell status-green">120%</div>
+                <div class="heatmap-cell status-green">100%</div>
+                <div class="heatmap-cell status-green">150%</div>
+                <div class="heatmap-cell status-yellow">70%</div>
+
+                <!-- ECE -->
+                <div class="heatmap-cell cell-dept">ECE</div>
+                <div class="heatmap-cell status-yellow">90%</div>
+                <div class="heatmap-cell status-green">102%</div>
+                <div class="heatmap-cell status-red">45%</div>
+                <div class="heatmap-cell status-yellow">80%</div>
+                <div class="heatmap-cell status-yellow">65%</div>
+                <div class="heatmap-cell status-green">110%</div>
+                <div class="heatmap-cell status-red">30%</div>
+
+                <!-- ISE -->
+                <div class="heatmap-cell cell-dept">ISE</div>
+                <div class="heatmap-cell status-green">105%</div>
+                <div class="heatmap-cell status-green">100%</div>
+                <div class="heatmap-cell status-yellow">82%</div>
+                <div class="heatmap-cell status-green">110%</div>
+                <div class="heatmap-cell status-green">95%</div>
+                <div class="heatmap-cell status-green">120%</div>
+                <div class="heatmap-cell status-yellow">65%</div>
+
+                <!-- EEE -->
+                <div class="heatmap-cell cell-dept">EEE</div>
+                <div class="heatmap-cell status-yellow">85%</div>
+                <div class="heatmap-cell status-yellow">80%</div>
+                <div class="heatmap-cell status-red">40%</div>
+                <div class="heatmap-cell status-yellow">92%</div>
+                <div class="heatmap-cell status-yellow">70%</div>
+                <div class="heatmap-cell status-yellow">88%</div>
+                <div class="heatmap-cell status-red">25%</div>
+
+                <!-- ME -->
+                <div class="heatmap-cell cell-dept">ME</div>
+                <div class="heatmap-cell status-red">55%</div>
+                <div class="heatmap-cell status-yellow">75%</div>
+                <div class="heatmap-cell status-red">20%</div>
+                <div class="heatmap-cell status-yellow">90%</div>
+                <div class="heatmap-cell status-red">40%</div>
+                <div class="heatmap-cell status-yellow">85%</div>
+                <div class="heatmap-cell status-red">15%</div>
+
+                <!-- CHE -->
+                <div class="heatmap-cell cell-dept">CHE</div>
+                <div class="heatmap-cell status-yellow">72%</div>
+                <div class="heatmap-cell status-yellow">82%</div>
+                <div class="heatmap-cell status-red">35%</div>
+                <div class="heatmap-cell status-yellow">88%</div>
+                <div class="heatmap-cell status-yellow">60%</div>
+                <div class="heatmap-cell status-yellow">90%</div>
+                <div class="heatmap-cell status-red">40%</div>
+
+                <!-- PHY -->
+                <div class="heatmap-cell cell-dept">PHY</div>
+                <div class="heatmap-cell status-yellow">95%</div>
+                <div class="heatmap-cell status-green">110%</div>
+                <div class="heatmap-cell status-red">10%</div>
+                <div class="heatmap-cell status-red">20%</div>
+                <div class="heatmap-cell status-yellow">70%</div>
+                <div class="heatmap-cell status-green">130%</div>
+                <div class="heatmap-cell status-red">0%</div>
+
+                <!-- AIML -->
+                <div class="heatmap-cell cell-dept">AIML</div>
+                <div class="heatmap-cell status-green">115%</div>
+                <div class="heatmap-cell status-green">108%</div>
+                <div class="heatmap-cell status-yellow">92%</div>
+                <div class="heatmap-cell status-green">140%</div>
+                <div class="heatmap-cell status-green">110%</div>
+                <div class="heatmap-cell status-green">160%</div>
+                <div class="heatmap-cell status-yellow">80%</div>
+
+                <!-- AIDS -->
+                <div class="heatmap-cell cell-dept">AIDS</div>
+                <div class="heatmap-cell status-green">102%</div>
+                <div class="heatmap-cell status-green">100%</div>
+                <div class="heatmap-cell status-yellow">88%</div>
+                <div class="heatmap-cell status-green">130%</div>
+                <div class="heatmap-cell status-green">105%</div>
+                <div class="heatmap-cell status-green">140%</div>
+                <div class="heatmap-cell status-yellow">75%</div>
+
+                <!-- MAT -->
+                <div class="heatmap-cell cell-dept">MAT</div>
+                <div class="heatmap-cell status-yellow">98%</div>
+                <div class="heatmap-cell status-green">105%</div>
+                <div class="heatmap-cell status-red">5%</div>
+                <div class="heatmap-cell status-red">10%</div>
+                <div class="heatmap-cell status-yellow">75%</div>
+                <div class="heatmap-cell status-green">125%</div>
+                <div class="heatmap-cell status-red">0%</div>
+
+                <!-- MCA -->
+                <div class="heatmap-cell cell-dept">MCA</div>
+                <div class="heatmap-cell status-yellow">88%</div>
+                <div class="heatmap-cell status-yellow">92%</div>
+                <div class="heatmap-cell status-yellow">60%</div>
+                <div class="heatmap-cell status-yellow">95%</div>
+                <div class="heatmap-cell status-yellow">82%</div>
+                <div class="heatmap-cell status-green">105%</div>
+                <div class="heatmap-cell status-yellow">60%</div>
+
+                <!-- MBA -->
+                <div class="heatmap-cell cell-dept">MBA</div>
+                <div class="heatmap-cell status-yellow">75%</div>
+                <div class="heatmap-cell status-yellow">85%</div>
+                <div class="heatmap-cell status-yellow">70%</div>
+                <div class="heatmap-cell status-green">105%</div>
+                <div class="heatmap-cell status-yellow">72%</div>
+                <div class="heatmap-cell status-yellow">95%</div>
+                <div class="heatmap-cell status-yellow">65%</div>
+
+                <!-- Total Row -->
+                <div class="heatmap-cell cell-dept" style="background: #f1f5f9; font-weight: 800;">Total</div>
+                <div class="heatmap-cell status-green" style="font-weight: 700;">92%</div>
+                <div class="heatmap-cell status-green" style="font-weight: 700;">95%</div>
+                <div class="heatmap-cell status-yellow" style="font-weight: 700;">65%</div>
+                <div class="heatmap-cell status-green" style="font-weight: 700;">108%</div>
+                <div class="heatmap-cell status-yellow" style="font-weight: 700;">85%</div>
+                <div class="heatmap-cell status-green" style="font-weight: 700;">120%</div>
+                <div class="heatmap-cell status-yellow" style="font-weight: 700;">60%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 5 & 6: Pending & Insights -->
+    <div class="bottom-viz-grid">
+        <div class="viz-card">
+            <h3><i class="fa-solid fa-triangle-exclamation"></i> Pending Analysis</h3>
+            <div class="pending-list">
+                <div class="pending-item">
+                    <div class="pending-info">
+                        <h4>Pending Papers</h4>
+                        <p>Verification Required</p>
+                    </div>
+                    <div class="pending-value">142</div>
+                </div>
+                <div class="pending-item">
+                    <div class="pending-info">
+                        <h4>Pending Patents</h4>
+                        <p>Awaiting Docs</p>
+                    </div>
+                    <div class="pending-value">38</div>
+                </div>
+                <div class="pending-item">
+                    <div class="pending-info">
+                        <h4>Extension Status</h4>
+                        <p>Critical Delay</p>
+                    </div>
+                    <div class="pending-value">86</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="insights-panel">
+            <h3><i class="fa-solid fa-lightbulb"></i> Performance Insights</h3>
+            <div class="insight-item">
+                <div class="insight-icon icon-success"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                <div class="insight-text">
+                    <h4>Innovation Leader</h4>
+                    <p>Innovation category exceeded target by 200% this quarter, driven largely by the AIML and CSE departments.</p>
+                </div>
+            </div>
+            <div class="insight-item">
+                <div class="insight-icon icon-warning"><i class="fa-solid fa-circle-exclamation"></i></div>
+                <div class="insight-text">
+                    <h4>IP Alert</h4>
+                    <p>Patents and Copyrights (P) are below 50% target in ECE, EEE, and Mechanical. Research intervention recommended.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

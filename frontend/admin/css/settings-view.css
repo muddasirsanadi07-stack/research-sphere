@@ -1,0 +1,146 @@
+/* Settings View Styles */
+
+.settings-container {
+    padding: 10px 0 50px 0;
+    max-width: 800px;
+}
+
+.settings-header {
+    margin-bottom: 30px;
+}
+
+.settings-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #111827;
+}
+
+.settings-group {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+.settings-group h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #F9FAFB;
+}
+
+.settings-item:last-child {
+    border-bottom: none;
+}
+
+.s-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.s-item-label {
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.95rem;
+}
+
+.s-item-desc {
+    font-size: 0.85rem;
+    color: #6B7280;
+}
+
+.s-item-control {
+    min-width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Form Controls */
+.s-input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #D1D5DB;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.s-input:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.s-select {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #D1D5DB;
+    background: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #D1D5DB;
+    transition: .3s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; width: 18px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider { background-color: #4F46E5; }
+input:checked + .slider:before { transform: translateX(20px); }
+
+/* Danger Zone */
+.btn-danger-text {
+    color: #EF4444;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: var(--transition);
+}
+
+.btn-danger-text:hover { background: #FEF2F2; }

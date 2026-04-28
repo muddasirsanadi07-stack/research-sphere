@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResearchSphere | Academic Achievement Portal</title>
+    <link rel="icon" href="shared/img/main_icon.png" type="image/png">
+
+    <meta name="description"
+        content="Platform for tracking and celebrating student research achievements at CMRIT. Empowering next-gen innovators.">
+    <meta name="keywords" content="Research, Academic Achievements, CMRIT, Student Portal, Innovation">
+
+    <link rel="stylesheet" href="shared/css/style.css">
+
+    <!-- importing fonts from google fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!--importing icons from font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-circle"></div>
+            <img src="shared/img/cmrit.png" alt="Logo" class="loader-logo">
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <img src="shared/img/cmrit.png" alt="Logo" width="60" height="30">
+                </div>
+                <span>ResearchSphere</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">Our Vision</a>
+                <a href="#audience" class="nav-link">For Users</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="login.html" class="btn btn-primary nav-btn">Access Portals</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-image-wrapper">
+                <img src="shared/img/college.jpg" alt="CMRIT College Campus" class="hero-college-img">
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">
+                        <span class="badge-dot"></span> CMRIT Academic Portal
+                    </div>
+                    <h1 class="hero-title">
+                        Welcome to <span class="text-gradient">ResearchSphere</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Empowering the next generation of researchers, innovators, and leaders. Discover, track, and
+                        elevate your academic achievements within the CMRIT community.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="login.html?role=admin" class="btn btn-primary btn-lg" style="background: #1e1b4b; border-color: #1e1b4b;">
+                            <i class="fa-solid fa-user-shield"></i> Admin Portal
+                        </a>
+                        <a href="login.html?role=faculty" class="btn btn-outline btn-lg" style="border-color: #7c6af7; color: #7c6af7;">
+                            <i class="fa-solid fa-chalkboard-user"></i> Faculty Portal
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="pubCount">0</span>
+                            <span class="stat-label">Publications</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="grantCount">0</span>
+                            <span class="stat-label">Grants</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="innovationScore">0%</span>
+                            <span class="stat-label">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: How It Works -->
+        <section class="how-it-works section-padding" id="about">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-desc">A simple, streamlined process to manage your academic data.</p>
+                </div>
+                <div class="steps-container">
+                    <div class="step-item reveal">
+                        <div class="step-number">1</div>
+                        <h4>Add achievements</h4>
+                        <p>Quickly input data via digital forms or bulk upload.</p>
+                    </div>
+                    <div class="step-connector reveal"></div>
+                    <div class="step-item reveal" style="transition-delay: 100ms;">
+                        <div class="step-number">2</div>
+                        <h4>Store Securely</h4>
+                        <p>All records are organized and categorized automatically.</p>
+                    </div>
+                    <div class="step-connector reveal" style="transition-delay: 100ms;"></div>
+                    <div class="step-item reveal" style="transition-delay: 200ms;">
+                        <div class="step-number">3</div>
+                        <h4>Search & Filter</h4>
+                        <p>Retrieve any record or achievement in seconds.</p>
+                    </div>
+                    <div class="step-connector reveal" style="transition-delay: 200ms;"></div>
+                    <div class="step-item reveal" style="transition-delay: 300ms;">
+                        <div class="step-number">4</div>
+                        <h4>View Results</h4>
+                        <p>Generate reports and track institutional progress.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Audience -->
+        <section class="users-section section-padding bg-light" id="audience">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">Who Is This For?</h2>
+                </div>
+                <div class="users-grid">
+                    <div class="user-card reveal">
+                        <div class="user-avatar"><i class="fa-solid fa-chalkboard-user"></i></div>
+                        <h4>Faculty</h4>
+                        <p>Monitor student progress and identify areas for mentorship and verification.</p>
+                    </div>
+                    <div class="user-card reveal" style="transition-delay: 200ms;">
+                        <div class="user-avatar"><i class="fa-solid fa-building-columns"></i></div>
+                        <h4>Administrators</h4>
+                        <p>Gain institutional insights and manage departmental performance metrics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call-To-Action -->
+        <section class="final-cta-section section-padding" id="get-started">
+            <div class="container">
+                <div class="cta-box reveal">
+                    <div class="cta-content center-content">
+                        <h2>Ready to manage your achievements?</h2>
+                        <div class="cta-actions center-actions">
+                            <a href="login.html" class="btn btn-primary btn-lg">Go to Dashboard</a>
+                            <a href="#home" class="btn btn-outline btn-lg">Back to Top</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <span>ResearchSphere</span>
+                    </a>
+                    <p>Elevating academic excellence through elegant technology.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <a href="login.html">Login</a>
+                    <a href="#about">About</a>
+                    <a href="#audience">Users</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Institutional</h4>
+                    <a href="#">CMRIT Website</a>
+                    <a href="#">Faculty Portal</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ResearchSphere. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

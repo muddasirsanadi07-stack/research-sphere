@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
+    <title>Dashboard - ResearchSphere</title>
+    
+    <!-- External Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Project Styles (Modularly Imported via dashboard.css) -->
+    <link rel="stylesheet" href="../shared/css/style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body class="">
+
+    <!-- Sidebar Navigation Shell -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">
+                <img src="../shared/img/cmrit.png" alt="Logo">
+                <span>ResearchSphere</span>
+            </a>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-target="dashboard-view">
+                <i class="fa-solid fa-border-all"></i>
+                <span class="nav-text">Dashboard</span>
+            </a>
+
+            <!-- Faculty Specific Nav -->
+            <div class="role-section show-faculty">
+                <a href="#" class="nav-item" data-target="faculty-verification-view"><i class="fa-solid fa-clipboard-check"></i> <span class="nav-text">Verification Queue</span></a>
+                <a href="#" class="nav-item" data-target="faculty-students-view"><i class="fa-solid fa-users"></i> <span class="nav-text">My Students</span></a>
+            </div>
+
+            <!-- Admin Specific Nav -->
+            <div class="role-section show-admin">
+                <a href="#" class="nav-item" data-target="admin-achievements-view"><i class="fa-solid fa-award"></i> <span class="nav-text">Achievements</span></a>
+                <a href="#" class="nav-item" data-target="admin-analytics-view"><i class="fa-solid fa-chart-line"></i> <span class="nav-text">Analytics</span></a>
+                <a href="#" class="nav-item" data-target="admin-manage-view"><i class="fa-solid fa-sliders"></i> <span class="nav-text">Manage</span></a>
+            </div>
+
+            <a href="#" class="nav-item" data-target="settings-view"><i class="fa-solid fa-gear"></i> <span class="nav-text">Settings</span></a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button id="logout-btn" class="action-btn" style="width: 100%; text-align: left; padding: 12px 16px;">
+                <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="sidebar-toggle"><i class="fa-solid fa-bars"></i></button>
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="year-filter">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <select id="academic-year">
+                        <option value="2025-26">2025-26</option>
+                        <option value="2024-25">2024-25</option>
+                    </select>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <div class="topbar-action-item">
+                    <div class="action-icon-pill"><i class="fa-solid fa-bell"></i></div>
+                    <span class="action-label">Notifications</span>
+                </div>
+                <div class="topbar-action-item user-profile-trigger">
+                    <div class="avatar" id="user-avatar">U</div>
+                    <span class="action-label" id="user-name">Loading...</span>
+                    <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-area" id="main-content-area">
+            <!-- Modular View Containers (Content can be loaded dynamically) -->
+            
+            <!-- 1. DASHBOARD HOME -->
+            <div id="dashboard-view" class="dashboard-view active">
+                <!-- Content will be injected or included -->
+                <div id="home-content-container">
+                    <!-- For now, we'll keep the core HTML structure for initial load performance -->
+                </div>
+            </div>
+
+            <!-- 2. ACHIEVEMENTS -->
+            <div id="admin-achievements-view" class="dashboard-view">
+                <div id="achievements-content-container"></div>
+            </div>
+
+            <!-- 3. ANALYTICS -->
+            <div id="admin-analytics-view" class="dashboard-view">
+                <div id="analytics-content-container"></div>
+            </div>
+
+            <!-- 4. MANAGE -->
+            <div id="admin-manage-view" class="dashboard-view">
+                <div id="manage-content-container"></div>
+            </div>
+
+            <!-- 5. SETTINGS -->
+            <div id="settings-view" class="dashboard-view">
+                <div id="settings-content-container"></div>
+            </div>
+
+            <!-- Faculty Specific Views -->
+            <div id="faculty-verification-view" class="dashboard-view"></div>
+            <div id="faculty-students-view" class="dashboard-view"></div>
+        </div>
+    </main>
+
+    <!-- Modular Script Injection -->
+    <script src="dashboard.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="js/achievements.js"></script>
+    <script src="js/manage.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

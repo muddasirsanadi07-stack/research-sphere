@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+backend/sheets/database.xlsx (if it still exists)
+*.log
+.env

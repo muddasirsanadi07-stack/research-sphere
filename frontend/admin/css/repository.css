@@ -1,0 +1,239 @@
+/* Research Repository Design System */
+
+:root {
+    --repo-sidebar: #0f172a;
+    --repo-bg: #f8fafc;
+    --repo-card: #ffffff;
+    --repo-accent: #6366f1;
+    --repo-border: rgba(0, 0, 0, 0.08);
+}
+
+.repo-body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--repo-bg);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.repo-sidebar {
+    width: 280px;
+    background: var(--repo-sidebar);
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.repo-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.back-to-dash {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    transition: 0.3s;
+}
+
+.back-to-dash:hover {
+    background: var(--repo-accent);
+    color: white;
+}
+
+.repo-brand span {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+.repo-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-section {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin: 20px 0 10px 10px;
+}
+
+.repo-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #94a3b8;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.repo-nav-item i { width: 20px; text-align: center; }
+
+.repo-nav-item:hover {
+    background: rgba(255,255,255,0.05);
+    color: #f8fafc;
+}
+
+.repo-nav-item.active {
+    background: var(--repo-accent);
+    color: white;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.repo-footer {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.btn-add-record {
+    width: 100%;
+    padding: 14px;
+    background: white;
+    color: var(--repo-sidebar);
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-add-record:hover {
+    background: #e2e8f0;
+    transform: scale(1.02);
+}
+
+/* Main Content */
+.repo-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.repo-header {
+    height: 80px;
+    background: white;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--repo-border);
+}
+
+.repo-header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 0 4px 0;
+}
+
+.repo-breadcrumbs {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.repo-search {
+    background: #f1f5f9;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 400px;
+}
+
+.repo-search input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--repo-border);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-btn:hover { background: #f1f5f9; color: var(--repo-accent); }
+
+/* Content Area */
+.repo-content-area {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    background-image: 
+        radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.repo-loader {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0,0,0,0.05);
+    border-top: 3px solid var(--repo-accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Shared Component: Analytics Card */
+.repo-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.repo-data-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--repo-border);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}

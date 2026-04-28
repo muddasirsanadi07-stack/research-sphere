@@ -1,0 +1,194 @@
+<!-- Home Dashboard View Partial -->
+<div class="role-section show-student show-faculty">
+    <div style="margin-bottom: 30px;">
+        <h2 style="font-size: 1.8rem; font-weight: 700; color: var(--text-main);">Performance Overview</h2>
+        <p style="color: var(--text-muted);">Real-time performance insights and achievement tracking.</p>
+    </div>
+
+    <!-- Performance Cards Row -->
+    <div class="performance-grid">
+        <div class="perf-card">
+            <span class="perf-label">Total Target</span>
+            <h2 class="perf-value">1,500</h2>
+        </div>
+        <div class="perf-card">
+            <span class="perf-label">Total Achieved</span>
+            <h2 class="perf-value">1,240</h2>
+        </div>
+        <div class="perf-card high-perf">
+            <span class="perf-label">Achievement %</span>
+            <h2 class="perf-value">82.6%</h2>
+            <div class="perf-indicator"></div>
+        </div>
+        <div class="perf-card">
+            <span class="perf-label">Top Department</span>
+            <h2 class="perf-value" style="font-size: 1.4rem;">CS Department</h2>
+        </div>
+        <div class="perf-card low-perf">
+            <span class="perf-label">Lowest Department</span>
+            <h2 class="perf-value" style="font-size: 1.4rem;">ME Department</h2>
+            <div class="perf-indicator"></div>
+        </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="charts-container">
+        <div class="dash-card chart-wrapper">
+            <div class="chart-header">
+                <h3>Target vs Achievement</h3>
+                <p>ByCategory Analysis</p>
+            </div>
+            <div class="canvas-holder">
+                <canvas id="targetVsAchievementChart"></canvas>
+            </div>
+        </div>
+        <div class="dash-card chart-wrapper">
+            <div class="chart-header">
+                <h3>Department Performance</h3>
+                <p>Achievement % by Department</p>
+            </div>
+            <div class="canvas-holder">
+                <canvas id="deptPerformanceChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ADMIN DASHBOARD CONTENT (Compact Version) -->
+<div class="role-section show-admin">
+    <div class="admin-section-title">
+        <h2>Research & Innovation Overview</h2>
+        <p>Institutional performance across key academic and financial metrics.</p>
+    </div>
+
+    <div class="admin-compact-section">
+        <!-- Category 1: Research Papers -->
+        <div class="category-card card-research">
+            <div class="category-info">
+                <i class="fa-solid fa-file-lines"></i>
+                <h3>Research Papers</h3>
+            </div>
+            <div class="metrics-row">
+                <div class="compact-metric">
+                    <span class="compact-label"><h4>Journal</h4></span>
+                    <span class="compact-value" id="journalCount">0</span>
+                </div>
+                <div class="compact-metric">
+                    <span class="compact-label"><h4>Conference</h4></span>
+                    <span class="compact-value" id="conferenceCount">0</span>
+                </div>
+                <div class="compact-metric">
+                    <span class="compact-label"><h4>Total Papers</h4></span>
+                    <span class="compact-value highlight-purple" id="totalPapers">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 2: Patents -->
+        <div class="category-card card-ip">
+            <div class="category-info">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Patents & Copyrights</h3>
+            </div>
+            <div class="metrics-row">
+                <div class="compact-metric">
+                    <span class="compact-label"><h4>Filed/Published</h4></span>
+                    <span class="compact-value" id="patentFiledCount">0</span>
+                </div>
+                <div class="compact-metric">
+                    <span class="compact-label"><h4>Granted</h4></span>
+                    <span class="compact-value" id="patentGrantedCount">0</span>
+                </div>
+                <div class="compact-metric">
+                    <span class="compact-label"><h4>Total Patents</h4></span>
+                    <span class="compact-value highlight-green" id="totalPatents">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 3: Financials -->
+        <div class="category-card card-finance">
+            <div class="category-info">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <h3>Financials & Consultancy</h3>
+            </div>
+            <div class="metrics-row">
+                <div class="compact-metric">
+                    <span class="compact-label"><h4>Sanctioned</h4></span>
+                    <span class="compact-value" id="proposalAmount">₹ 0</span>
+                </div>
+                <div class="compact-metric">
+                    <span class="compact-label"><h4>Consultancy</h4></span>
+                    <span class="compact-value" id="consultancyAmount">₹ 0</span>
+                </div>
+                <div class="compact-metric">
+                    <span class="compact-label"><h4>E-load Received</h4></span>
+                    <span class="compact-value highlight-gold" id="eloadAmount">₹ 0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 4: Unique Funding Vault -->
+        <div class="funding-vault-card">
+            <div class="vault-info-side">
+                <div class="vault-label">
+                    <i class="fa-solid fa-vault"></i>
+                    <h3>Funding Vault</h3>
+                </div>
+                <div class="vault-total-box">
+                    <span class="vault-total-label">Total Allocated Funds</span>
+                    <span class="vault-total-value" id="vault-total-value">0</span>
+                </div>
+            </div>
+            <div class="vault-breakdown">
+                <div class="vault-item">
+                    <span class="vault-item-label">MSME</span>
+                    <span class="vault-item-value" id="msme-value">₹ 0</span>
+                </div>
+                <div class="vault-item">
+                    <span class="vault-item-label">Mentor-Mentee</span>
+                    <span class="vault-item-value" id="mentor-value">₹ 0</span>
+                </div>
+                <div class="vault-item">
+                    <span class="vault-item-label">College Recv.</span>
+                    <span class="vault-item-value" id="college-value">₹ 0</span>
+                </div>
+                <div class="vault-item">
+                    <span class="vault-item-label">Kapila</span>
+                    <span class="vault-item-value" id="kapila-value">₹ 0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quarterly Achievement Section -->
+        <div class="quarterly-section" style="margin-top: 30px;">
+            <div class="section-header-compact" style="margin-bottom: 20px;">
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--text-main); display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-calendar-days" style="color: var(--accent-main);"></i> Quarterly Achievement
+                </h3>
+            </div>
+            <div class="quarterly-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+                <div class="q-card" style="background: white; padding: 20px; border-radius: 16px; border: 1px solid var(--border-main); text-align: center; transition: 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="q-label" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Q1</div>
+                    <div class="q-value" id="q1-value" style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">0</div>
+                    <div class="q-period" style="font-size: 0.75rem; color: #94a3b8;">Apr - Jun</div>
+                </div>
+                <div class="q-card" style="background: white; padding: 20px; border-radius: 16px; border: 1px solid var(--border-main); text-align: center; transition: 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="q-label" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Q2</div>
+                    <div class="q-value" id="q2-value" style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">0</div>
+                    <div class="q-period" style="font-size: 0.75rem; color: #94a3b8;">Jul - Sep</div>
+                </div>
+                <div class="q-card" style="background: white; padding: 20px; border-radius: 16px; border: 1px solid var(--border-main); text-align: center; transition: 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="q-label" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Q3</div>
+                    <div class="q-value" id="q3-value" style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">0</div>
+                    <div class="q-period" style="font-size: 0.75rem; color: #94a3b8;">Oct - Dec</div>
+                </div>
+                <div class="q-card" style="background: white; padding: 20px; border-radius: 16px; border: 1px solid var(--border-main); text-align: center; transition: 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="q-label" style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Q4</div>
+                    <div class="q-value" id="q4-value" style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">0</div>
+                    <div class="q-period" style="font-size: 0.75rem; color: #94a3b8;">Jan - Mar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

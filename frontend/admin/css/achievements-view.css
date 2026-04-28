@@ -1,0 +1,128 @@
+/* Redesigned Achievements View Styles */
+
+.achievements-container {
+    padding: 10px 0 50px 0;
+}
+
+.achievements-header {
+    margin-bottom: 30px;
+}
+
+.achievements-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #111827;
+}
+
+.achievements-header p {
+    color: #6B7280;
+    font-size: 0.95rem;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px; /* Spacing between cards: 16–24px */
+}
+
+.achievement-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.achievement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Icon Container */
+.card-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+/* Typography */
+.card-value {
+    font-size: 32px; /* Font size: 28–36px */
+    font-weight: bold;
+    color: #111827;
+    line-height: 1;
+}
+
+.card-label {
+    font-size: 14px; /* Font size: 13–15px */
+    color: #6B7280;
+    font-weight: 500;
+}
+
+.card-trend {
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 2px;
+}
+
+/* Color System per Theme */
+/* 1. Blue (Journals) */
+.theme-blue .card-icon-box { background: #6366F1; color: #FFFFFF; }
+.theme-blue { background: #EEF2FF; }
+.theme-blue .card-value { color: #1E3A8A; }
+.theme-blue .card-label { color: #1E3A8A; opacity: 0.8; }
+
+/* 2. Red (Patents) */
+.theme-red .card-icon-box { background: #EF4444; color: #FFFFFF; }
+.theme-red { background: #FEF2F2; }
+.theme-red .card-value { color: #991B1B; }
+.theme-red .card-label { color: #991B1B; opacity: 0.8; }
+
+/* 3. Green (Granted) */
+.theme-green .card-icon-box { background: #10B981; color: #FFFFFF; }
+.theme-green { background: #ECFDF5; }
+.theme-green .card-value { color: #065F46; }
+.theme-green .card-label { color: #065F46; opacity: 0.8; }
+
+/* 4. Yellow (Proposals) */
+.theme-yellow .card-icon-box { background: #F59E0B; color: #FFFFFF; }
+.theme-yellow { background: #FFFBEB; }
+.theme-yellow .card-value { color: #92400E; }
+.theme-yellow .card-label { color: #92400E; opacity: 0.8; }
+
+/* 5. Purple (Consultancy) */
+.theme-purple .card-icon-box { background: #8B5CF6; color: #FFFFFF; }
+.theme-purple { background: #F5F3FF; }
+.theme-purple .card-value { color: #5B21B6; }
+.theme-purple .card-label { color: #5B21B6; opacity: 0.8; }
+
+/* 6. Pink (Entrepreneurship) */
+.theme-pink .card-icon-box { background: #EC4899; color: #FFFFFF; }
+.theme-pink { background: #FDF2F8; }
+.theme-pink .card-value { color: #9D174D; }
+.theme-pink .card-label { color: #9D174D; opacity: 0.8; }
+
+/* 7. Cyan (Incentives) */
+.theme-cyan .card-icon-box { background: #06B6D4; color: #FFFFFF; }
+.theme-cyan { background: #ECFEFF; }
+.theme-cyan .card-value { color: #164E63; }
+.theme-cyan .card-label { color: #164E63; opacity: 0.8; }
+
+/* 8. Orange (Student Pubs) */
+.theme-orange .card-icon-box { background: #FB923C; color: #FFFFFF; }
+.theme-orange { background: #FFF7ED; }
+.theme-orange .card-value { color: #9A3412; }
+.theme-orange .card-label { color: #9A3412; opacity: 0.8; }

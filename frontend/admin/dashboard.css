@@ -1,0 +1,38 @@
+/* 
+ * Dashboard Monolithic Style Sheet (Now Modular)
+ * All view-specific styles have been moved to the css/ directory.
+ */
+
+/* Import Shell & Common Styles */
+@import url('css/dashboard-shell.css');
+
+/* Import View Modules */
+@import url('css/home-view.css');
+@import url('css/achievements-view.css');
+@import url('css/analytics-view.css');
+@import url('css/manage-view.css');
+@import url('css/settings-view.css');
+
+/* Global Variables & Shared Overrides */
+:root {
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

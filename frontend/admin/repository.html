@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Repository | Data Explorer</title>
+    
+    <!-- Icons and Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Shared and New Styles -->
+    <link rel="stylesheet" href="../shared/css/style.css">
+    <link rel="stylesheet" href="css/repository.css">
+</head>
+<body class="repo-body">
+
+    <!-- Explorer Sidebar -->
+    <aside class="repo-sidebar">
+        <div class="repo-brand">
+            <a href="dashboard.html" class="back-to-dash">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <span>Data Explorer</span>
+        </div>
+        
+        <nav class="repo-nav">
+            <div class="nav-section">Categories</div>
+            <a href="#hub" class="repo-nav-item active" data-category="hub">
+                <i class="fa-solid fa-layer-group"></i> <span>Repository Hub</span>
+            </a>
+            <a href="#journals" class="repo-nav-item" data-category="journals">
+                <i class="fa-solid fa-book-open"></i> <span>Journal Papers</span>
+            </a>
+            <a href="#patents" class="repo-nav-item" data-category="patents">
+                <i class="fa-solid fa-lightbulb"></i> <span>Patents (Filed)</span>
+            </a>
+            <a href="#granted" class="repo-nav-item" data-category="granted">
+                <i class="fa-solid fa-certificate"></i> <span>Granted Patents</span>
+            </a>
+            <a href="#proposals" class="repo-nav-item" data-category="proposals">
+                <i class="fa-solid fa-file-signature"></i> <span>Proposals</span>
+            </a>
+            <a href="#consultancy" class="repo-nav-item" data-category="consultancy">
+                <i class="fa-solid fa-handshake-angle"></i> <span>Consultancy</span>
+            </a>
+            <a href="#entrepreneur" class="repo-nav-item" data-category="entrepreneur">
+                <i class="fa-solid fa-rocket"></i> <span>Entrepreneurship</span>
+            </a>
+            <a href="#incentives" class="repo-nav-item" data-category="incentives">
+                <i class="fa-solid fa-coins"></i> <span>Incentives</span>
+            </a>
+            <a href="#students" class="repo-nav-item" data-category="students">
+                <i class="fa-solid fa-graduation-cap"></i> <span>Student Pubs</span>
+            </a>
+        </nav>
+
+        <div class="repo-footer">
+            <button class="btn-add-record" id="global-add-btn">
+                <i class="fa-solid fa-plus"></i> New Record
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Data Canvas -->
+    <main class="repo-main">
+        <!-- Top Control Bar -->
+        <header class="repo-header">
+            <div class="header-left">
+                <h1 id="view-title">Repository Hub</h1>
+                <div class="repo-breadcrumbs">Admin / Explorer / <span id="breadcrumb-current">Hub</span></div>
+            </div>
+            <div class="header-right">
+                <div class="repo-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search across all records...">
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn"><i class="fa-solid fa-filter"></i></button>
+                    <button class="icon-btn"><i class="fa-solid fa-file-export"></i></button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dynamic Content Loader -->
+        <div id="repo-content" class="repo-content-area">
+            <!-- Content loaded via repository.js -->
+            <div class="repo-loader">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chart.js and Logic -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/repository.js"></script>
+</body>
+</html>

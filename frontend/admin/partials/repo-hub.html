@@ -1,0 +1,80 @@
+<!-- Repository Hub Partial -->
+<div class="repo-hub-overview">
+    <div class="repo-card-grid">
+        <!-- Summary Totals -->
+        <div class="repo-data-card">
+            <div class="card-head">
+                <i class="fa-solid fa-database" style="color: #6366f1;"></i>
+                <h4>Total Repository Records</h4>
+            </div>
+            <div class="card-body">
+                <span class="big-val">1,482</span>
+                <span class="sub-val">+12% from last year</span>
+            </div>
+        </div>
+
+        <div class="repo-data-card">
+            <div class="card-head">
+                <i class="fa-solid fa-clock-rotate-left" style="color: #f59e0b;"></i>
+                <h4>Recent Submissions</h4>
+            </div>
+            <div class="card-body">
+                <span class="big-val">24</span>
+                <span class="sub-val">This month</span>
+            </div>
+        </div>
+
+        <div class="repo-data-card">
+            <div class="card-head">
+                <i class="fa-solid fa-shield-check" style="color: #10b981;"></i>
+                <h4>Verified Percentage</h4>
+            </div>
+            <div class="card-body">
+                <span class="big-val">94.2%</span>
+                <span class="sub-val">Across all categories</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Health Section -->
+    <div class="repo-section-title" style="margin-top: 40px; margin-bottom: 20px;">
+        <h3>Data Health by Category</h3>
+    </div>
+    
+    <div class="repo-table-container" style="background: white; border-radius: 20px; border: 1px solid var(--repo-border); overflow: hidden;">
+        <table class="repo-table" style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="background: #f8fafc; text-align: left; font-size: 0.85rem; color: #64748b;">
+                    <th style="padding: 15px 25px;">Category</th>
+                    <th style="padding: 15px;">Total Records</th>
+                    <th style="padding: 15px;">Verified</th>
+                    <th style="padding: 15px;">Completeness</th>
+                    <th style="padding: 15px;">Status</th>
+                </tr>
+            </thead>
+            <tbody style="font-size: 0.95rem;">
+                <tr style="border-top: 1px solid #f1f5f9;">
+                    <td style="padding: 15px 25px; font-weight: 600;">Journal Papers</td>
+                    <td style="padding: 15px;">642</td>
+                    <td style="padding: 15px;">610</td>
+                    <td style="padding: 15px;">98%</td>
+                    <td style="padding: 15px;"><span class="badge badge-success" style="background: #ecfdf5; color: #059669; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem;">Healthy</span></td>
+                </tr>
+                <tr style="border-top: 1px solid #f1f5f9;">
+                    <td style="padding: 15px 25px; font-weight: 600;">Patents</td>
+                    <td style="padding: 15px;">128</td>
+                    <td style="padding: 15px;">102</td>
+                    <td style="padding: 15px;">85%</td>
+                    <td style="padding: 15px;"><span class="badge badge-warning" style="background: #fffbeb; color: #d97706; padding: 4px 10px; border-radius: 6px; font-size: 0.8rem;">Needs Sync</span></td>
+                </tr>
+                <!-- More rows simulated -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+.card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; color: #64748b; font-weight: 600; font-size: 0.9rem; }
+.big-val { display: block; font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 5px; }
+.sub-val { font-size: 0.85rem; color: #94a3b8; }
+</style>
