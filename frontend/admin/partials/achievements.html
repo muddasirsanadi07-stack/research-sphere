@@ -1,65 +1,83 @@
 <!-- Institutional Achievements View -->
 <div class="achievements-container">
-    <div class="achievements-header">
-        <h2>Institutional Achievements</h2>
-        <p>Verified performance metrics for the current academic session.</p>
+    <div class="achievements-header"
+        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+        <div>
+            <h2>Institutional Achievements</h2>
+            <p>Verified performance metrics for the current academic session.</p>
+        </div>
+        <a href="repository.html#hub" class="btn-repo-link" style="
+            display: flex; align-items: center; gap: 10px; 
+            padding: 10px 20px; background: #0f172a; color: white; 
+            text-decoration: none; border-radius: 12px; font-weight: 600; 
+            font-size: 0.9rem; transition: 0.3s; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+        ">
+            <i class="fa-solid fa-database"></i>
+            Explore Repo Hub
+        </a>
     </div>
 
     <div class="metrics-grid">
         <!-- 1. Journal Papers -->
-        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#journals'" style="cursor: pointer;">
+        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#journals'"
+            style="cursor: pointer;">
             <div class="card-icon-box"><i class="fa-solid fa-book-open"></i></div>
-            <div class="card-value">142</div>
+            <div class="card-value" id="ach-journal-count">0</div>
             <div class="card-label">Journal Papers</div>
             <div class="card-trend" style="color: #10B981;">
-                <i class="fa-solid fa-arrow-trend-up"></i> +12%
+                <i class="fa-solid fa-arrow-trend-up"></i> Verified
             </div>
         </div>
 
         <!-- 2. Patents -->
-        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#patents'" style="cursor: pointer;">
+        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#patents'"
+            style="cursor: pointer;">
             <div class="card-icon-box"><i class="fa-solid fa-lightbulb"></i></div>
-            <div class="card-value">38</div>
+            <div class="card-value" id="ach-patent-count">0</div>
             <div class="card-label">Patents Filed</div>
-            <div class="card-trend" style="color: #EF4444;">
-                <i class="fa-solid fa-clock"></i> 5 Pending
+            <div class="card-trend" style="color: #6366f1;">
+                <i class="fa-solid fa-clock"></i> Active
             </div>
         </div>
 
         <!-- 3. Granted Patents -->
-        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#granted'" style="cursor: pointer;">
+        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#granted'"
+            style="cursor: pointer;">
             <div class="card-icon-box"><i class="fa-solid fa-certificate"></i></div>
-            <div class="card-value">15</div>
+            <div class="card-value" id="ach-granted-count">0</div>
             <div class="card-label">Granted Patents</div>
             <div class="card-trend">
-                <i class="fa-solid fa-check-double"></i> Verified
+                <i class="fa-solid fa-check-double"></i> Official
             </div>
         </div>
 
         <!-- 4. Proposals -->
-        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#proposals'" style="cursor: pointer;">
+        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#proposals'"
+            style="cursor: pointer;">
             <div class="card-icon-box"><i class="fa-solid fa-file-signature"></i></div>
-            <div class="card-value">28</div>
+            <div class="card-value" id="ach-proposal-count">0</div>
             <div class="card-label">Proposals</div>
             <div class="card-trend" style="color: #D97706;">
-                <i class="fa-solid fa-hand-holding-dollar"></i> 10 Sanctioned
+                <i class="fa-solid fa-hand-holding-dollar"></i> <span id="ach-proposal-sanctioned">0</span> Sanctioned
             </div>
         </div>
 
         <!-- 5. Consultancy -->
-        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#consultancy'" style="cursor: pointer;">
+        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#consultancy'"
+            style="cursor: pointer;">
             <div class="card-icon-box"><i class="fa-solid fa-handshake-angle"></i></div>
-            <div class="card-value">₹ 1.8M</div>
+            <div class="card-value" id="ach-consultancy-count">0</div>
             <div class="card-label">Consultancy</div>
             <div class="card-trend">
-                <i class="fa-solid fa-briefcase"></i> 14 Projects
+                <i class="fa-solid fa-briefcase"></i> Verified
             </div>
         </div>
 
         <!-- 6. Entrepreneurship -->
-        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#entrepreneur'" style="cursor: pointer;">
+        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#entrepreneur'"
+            style="cursor: pointer;">
             <div class="card-icon-box"><i class="fa-solid fa-rocket"></i></div>
-            <div class="card-value">12</div>
+            <div class="card-value" id="ach-ent-count">0</div>
             <div class="card-label">Entrepreneurship</div>
             <div class="card-trend">
                 <i class="fa-solid fa-building"></i> Startups
@@ -67,9 +85,10 @@
         </div>
 
         <!-- 7. Incentives -->
-        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#incentives'" style="cursor: pointer;">
+        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#incentives'"
+            style="cursor: pointer;">
             <div class="card-icon-box"><i class="fa-solid fa-coins"></i></div>
-            <div class="card-value">₹ 450K</div>
+            <div class="card-value" id="ach-incentive-count">0</div>
             <div class="card-label">Incentives</div>
             <div class="card-trend">
                 <i class="fa-solid fa-award"></i> Disbursed
@@ -77,12 +96,13 @@
         </div>
 
         <!-- 8. Student Publications -->
-        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#students'" style="cursor: pointer;">
+        <div class="achievement-card theme-blue" onclick="window.location.href='repository.html#students'"
+            style="cursor: pointer;">
             <div class="card-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
-            <div class="card-value">96</div>
+            <div class="card-value" id="ach-student-count">0</div>
             <div class="card-label">Student Publications</div>
             <div class="card-trend" style="color: #EA580C;">
-                <i class="fa-solid fa-arrow-up"></i> 20% Growth
+                <i class="fa-solid fa-arrow-up"></i> Growth
             </div>
         </div>
     </div>

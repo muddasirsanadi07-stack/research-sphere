@@ -15,25 +15,33 @@ if (document.getElementById('journalCount')) startHomeLogic();
 
 async function fetchLocalData() {
     try {
-        const response = await fetch('http://localhost:5005/api/data');
+        const response = await fetch('http://localhost:5005/api/consolidated-stats');
         const data = await response.json();
         
-        // Map Excel Rows to UI
-        data.forEach(item => {
-            const elId = getElementIdForMetric(item.metric);
-            const el = document.getElementById(elId);
+        // Map Nested Stats to UI
+        const mappings = {
+            'journalCount': data.papers.journal,
+            'conferenceCount': data.papers.conference,
+            'totalPapers': data.papers.total,
+            'patentFiledCount': data.patents.filed,
+            'patentGrantedCount': data.patents.granted,
+            'proposalAmount': data.financials.sanctioned,
+            'consultancyAmount': data.financials.consultancy,
+            'msme-value': data.vault.msme,
+            'kapila-value': data.vault.kapila,
+            'college-value': data.vault.college,
+            'vault-total-value': data.vault.total,
+            'q1-value': data.quarterly.q1,
+            'q2-value': data.quarterly.q2,
+            'q3-value': data.quarterly.q3,
+            'q4-value': data.quarterly.q4
+        };
+
+        Object.entries(mappings).forEach(([id, val]) => {
+            const el = document.getElementById(id);
             if (el) {
-                el.innerText = item.value + (item.unit === 'Lakhs' ? " L" : "");
-                console.log(`Dashboard Update: ${elId} -> ${el.innerText}`);
-                el.dataset.category = item.category;
-                el.dataset.metric = item.metric;
-                el.dataset.unit = item.unit;
-                
-                // Add Edit Trigger
-                el.classList.add('editable-value');
-                el.title = "Double-click to edit";
-                el.oncontextmenu = (e) => { e.preventDefault(); makeEditable(el); }; // Right click to edit
-                el.ondblclick = () => makeEditable(el);
+                const isLakhs = id.toLowerCase().includes('amount') || id.toLowerCase().includes('value');
+                el.innerText = val + (isLakhs && !String(val).includes('₹') ? " L" : "");
             }
         });
     } catch (err) {

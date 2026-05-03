@@ -32,7 +32,6 @@ body {
 [data-user-role="admin"] .topbar,
 [data-user-role="admin"] .content-area {
     border-color: rgba(30, 41, 59, 0.1);
-    background-color: #ffffff; /* Ensure solid background */
 }
 
 [data-user-role="admin"] .topbar { background: #ffffff; }
@@ -241,7 +240,7 @@ body {
     padding: 30px;
     overflow-y: auto;
     position: relative;
-    background: #ffffff; 
+    background: #f1f5f9 url('../../shared/img/geometric-bg.png') center/cover fixed no-repeat;
     border-radius: 16px;
     border: 1px solid var(--border);
     box-shadow: 0 8px 30px rgba(0,0,0,0.12);

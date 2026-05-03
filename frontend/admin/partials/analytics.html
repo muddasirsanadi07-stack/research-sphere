@@ -1,235 +1,188 @@
-<!-- Analytics Dashboard Content (RCPIE) -->
-<div class="analytics-content">
+<div class="analytics-content" style="padding: 20px; max-width: 1400px; margin: 0 auto;">
     
-    <!-- Section 1: Summary Cards -->
-    <div class="summary-row">
-        <div class="summary-card perf-high">
-            <h2 id="total-target">1,250</h2>
-            <p>Total Target</p>
+    <div style="margin-bottom: 30px;">
+        <h2 style="font-size: 1.8rem; font-weight: 700; color: var(--text-main);">Institutional Performance Analytics</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">High-level overview of targets, achievements, and multi-dimensional departmental growth.</p>
+    </div>
+
+    <!-- 1. Top KPI Cards (Total Achievement Dept Cards) -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 30px;">
+        <!-- Target KPI -->
+        <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; font-weight: 600;">Total Target (AY)</h4>
+                <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(99, 102, 241, 0.1); display: flex; align-items: center; justify-content: center; color: #6366f1;">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+            </div>
+            <h2 id="kpi-target" style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin: 0;">0</h2>
         </div>
-        <div class="summary-card perf-mid">
-            <h2 id="total-achieved">984</h2>
-            <p>Total Achieved</p>
+        <!-- Achieved KPI -->
+        <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; font-weight: 600;">Total Achieved</h4>
+                <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(16, 185, 129, 0.1); display: flex; align-items: center; justify-content: center; color: #10b981;">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+            </div>
+            <h2 id="kpi-achieved" style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin: 0;">0</h2>
         </div>
-        <div class="summary-card perf-low">
-            <h2 id="total-pending">266</h2>
-            <p>Total Pending</p>
+        <!-- Achievement Rate KPI -->
+        <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; font-weight: 600;">Achievement Rate</h4>
+                <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(245, 158, 11, 0.1); display: flex; align-items: center; justify-content: center; color: #f59e0b;">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </div>
+            </div>
+            <div style="display: flex; align-items: baseline; gap: 8px;">
+                <h2 id="kpi-rate" style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin: 0;">0%</h2>
+                <span style="font-size: 0.85rem; font-weight: 600; color: #10b981;">Overall Growth</span>
+            </div>
         </div>
-        <div class="summary-card perf-high">
-            <h2 id="overall-pct">78.7%</h2>
-            <p>Overall Achievement %</p>
+        <!-- Top Dept KPI -->
+        <div style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); padding: 24px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; font-weight: 600;">Top Department</h4>
+                <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(236, 72, 153, 0.1); display: flex; align-items: center; justify-content: center; color: #ec4899;">
+                    <i class="fa-solid fa-ranking-star"></i>
+                </div>
+            </div>
+            <h2 id="kpi-top-dept" style="font-size: 1.8rem; font-weight: 800; color: #ec4899; margin: 0;">N/A</h2>
         </div>
     </div>
 
-    <!-- Section 2 & 3: Main Visualizations -->
-    <div class="viz-grid">
-        <div class="viz-card">
-            <h3><i class="fa-solid fa-chart-bar"></i> Target vs Achievement (RCPIE)</h3>
-            <div class="chart-container">
-                <canvas id="rcpieBarChart"></canvas>
+    <!-- 2. Departmental Spotlight (SHIFTED UP) -->
+    <div style="margin-bottom: 30px;">
+        <div class="dash-card" style="background: white; padding: 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid var(--border-main);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+                <div>
+                    <h3 style="font-size: 1.2rem; color: #1e293b; font-weight: 700; margin-bottom: 5px;"><i class="fa-solid fa-building-user" style="color: #3b82f6; margin-right: 8px;"></i> Departmental Spotlight</h3>
+                    <p style="font-size: 0.9rem; color: #64748b; margin: 0;">Select a department to view detailed RCPIE performance and target metrics.</p>
+                </div>
+                <div>
+                    <select id="dept-selector" style="padding: 10px 16px; border-radius: 8px; border: 1px solid #cbd5e1; background: #f8fafc; font-weight: 600; color: #334155; outline: none; cursor: pointer;">
+                        <option value="">Select Department...</option>
+                        <!-- Filled by JS -->
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="viz-card">
-            <h3><i class="fa-solid fa-ranking-star"></i> Department Ranking</h3>
-            <div class="chart-container">
-                <canvas id="deptRankChart"></canvas>
+
+            <div id="dept-data-view" style="display: none; padding: 10px;">
+                <div style="display: flex; align-items: center; gap: 30px; margin-bottom: 30px;">
+                    <div style="position: relative; width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: conic-gradient(#10b981 0%, #10b981 75%, #e2e8f0 75%, #e2e8f0 100%);">
+                        <div style="position: absolute; width: 80px; height: 80px; background: white; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <span id="dept-overall-rate" style="font-size: 1.2rem; font-weight: 800; color: #0f172a;">0%</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 id="dept-view-name" style="font-size: 2rem; font-weight: 800; color: #1e293b; margin: 0 0 8px 0;">Dept Name</h2>
+                        <div style="display: flex; gap: 20px;">
+                            <div>
+                                <span style="font-size: 0.85rem; color: #64748b; text-transform: uppercase;">Total Target</span>
+                                <div id="dept-view-target" style="font-size: 1.2rem; font-weight: 700; color: #3b82f6;">0</div>
+                            </div>
+                            <div>
+                                <span style="font-size: 0.85rem; color: #64748b; text-transform: uppercase;">Total Achieved</span>
+                                <div id="dept-view-achieved" style="font-size: 1.2rem; font-weight: 700; color: #10b981;">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4 style="font-size: 0.95rem; font-weight: 600; color: #475569; margin-bottom: 12px; border-bottom: 1px solid #f1f5f9; padding-bottom: 8px;">Category Achievement Breakdown</h4>
+                <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;">
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                        <h5 style="margin: 0 0 8px 0; color: #64748b; font-size: 0.85rem;">Research (R)</h5>
+                        <div id="dept-val-r" style="font-size: 1.4rem; font-weight: 800; color: #3b82f6;">0%</div>
+                    </div>
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                        <h5 style="margin: 0 0 8px 0; color: #64748b; font-size: 0.85rem;">Consultancy (C)</h5>
+                        <div id="dept-val-c" style="font-size: 1.4rem; font-weight: 800; color: #3b82f6;">0%</div>
+                    </div>
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                        <h5 style="margin: 0 0 8px 0; color: #64748b; font-size: 0.85rem;">Patents (P)</h5>
+                        <div id="dept-val-p" style="font-size: 1.4rem; font-weight: 800; color: #3b82f6;">0%</div>
+                    </div>
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                        <h5 style="margin: 0 0 8px 0; color: #64748b; font-size: 0.85rem;">Incubation (I)</h5>
+                        <div id="dept-val-i" style="font-size: 1.4rem; font-weight: 800; color: #3b82f6;">0%</div>
+                    </div>
+                    <div style="background: #f8fafc; padding: 16px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center;">
+                        <h5 style="margin: 0 0 8px 0; color: #64748b; font-size: 0.85rem;">Entrepren. (E)</h5>
+                        <div id="dept-val-e" style="font-size: 1.4rem; font-weight: 800; color: #3b82f6;">0%</div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Section 4: Achievement Percentage Heatmap -->
-    <div class="heatmap-card">
-        <h3><i class="fa-solid fa-table-cells"></i> Performance Heatmap (Dept-wise)</h3>
-        <div class="heatmap-scroll">
-            <div class="heatmap-grid" style="grid-template-columns: 140px repeat(7, 1fr);">
-                <!-- Header Row -->
-                <div class="heatmap-header">Dept.</div>
-                <div class="heatmap-header">R</div>
-                <div class="heatmap-header">C</div>
-                <div class="heatmap-header">P</div>
-                <div class="heatmap-header">I</div>
-                <div class="heatmap-header">E</div>
-                <div class="heatmap-header">M Paper</div>
-                <div class="heatmap-header">M Patent</div>
-
-                <!-- CSE -->
-                <div class="heatmap-cell cell-dept">CSE</div>
-                <div class="heatmap-cell status-green">110%</div>
-                <div class="heatmap-cell status-green">105%</div>
-                <div class="heatmap-cell status-yellow">85%</div>
-                <div class="heatmap-cell status-green">120%</div>
-                <div class="heatmap-cell status-green">100%</div>
-                <div class="heatmap-cell status-green">150%</div>
-                <div class="heatmap-cell status-yellow">70%</div>
-
-                <!-- ECE -->
-                <div class="heatmap-cell cell-dept">ECE</div>
-                <div class="heatmap-cell status-yellow">90%</div>
-                <div class="heatmap-cell status-green">102%</div>
-                <div class="heatmap-cell status-red">45%</div>
-                <div class="heatmap-cell status-yellow">80%</div>
-                <div class="heatmap-cell status-yellow">65%</div>
-                <div class="heatmap-cell status-green">110%</div>
-                <div class="heatmap-cell status-red">30%</div>
-
-                <!-- ISE -->
-                <div class="heatmap-cell cell-dept">ISE</div>
-                <div class="heatmap-cell status-green">105%</div>
-                <div class="heatmap-cell status-green">100%</div>
-                <div class="heatmap-cell status-yellow">82%</div>
-                <div class="heatmap-cell status-green">110%</div>
-                <div class="heatmap-cell status-green">95%</div>
-                <div class="heatmap-cell status-green">120%</div>
-                <div class="heatmap-cell status-yellow">65%</div>
-
-                <!-- EEE -->
-                <div class="heatmap-cell cell-dept">EEE</div>
-                <div class="heatmap-cell status-yellow">85%</div>
-                <div class="heatmap-cell status-yellow">80%</div>
-                <div class="heatmap-cell status-red">40%</div>
-                <div class="heatmap-cell status-yellow">92%</div>
-                <div class="heatmap-cell status-yellow">70%</div>
-                <div class="heatmap-cell status-yellow">88%</div>
-                <div class="heatmap-cell status-red">25%</div>
-
-                <!-- ME -->
-                <div class="heatmap-cell cell-dept">ME</div>
-                <div class="heatmap-cell status-red">55%</div>
-                <div class="heatmap-cell status-yellow">75%</div>
-                <div class="heatmap-cell status-red">20%</div>
-                <div class="heatmap-cell status-yellow">90%</div>
-                <div class="heatmap-cell status-red">40%</div>
-                <div class="heatmap-cell status-yellow">85%</div>
-                <div class="heatmap-cell status-red">15%</div>
-
-                <!-- CHE -->
-                <div class="heatmap-cell cell-dept">CHE</div>
-                <div class="heatmap-cell status-yellow">72%</div>
-                <div class="heatmap-cell status-yellow">82%</div>
-                <div class="heatmap-cell status-red">35%</div>
-                <div class="heatmap-cell status-yellow">88%</div>
-                <div class="heatmap-cell status-yellow">60%</div>
-                <div class="heatmap-cell status-yellow">90%</div>
-                <div class="heatmap-cell status-red">40%</div>
-
-                <!-- PHY -->
-                <div class="heatmap-cell cell-dept">PHY</div>
-                <div class="heatmap-cell status-yellow">95%</div>
-                <div class="heatmap-cell status-green">110%</div>
-                <div class="heatmap-cell status-red">10%</div>
-                <div class="heatmap-cell status-red">20%</div>
-                <div class="heatmap-cell status-yellow">70%</div>
-                <div class="heatmap-cell status-green">130%</div>
-                <div class="heatmap-cell status-red">0%</div>
-
-                <!-- AIML -->
-                <div class="heatmap-cell cell-dept">AIML</div>
-                <div class="heatmap-cell status-green">115%</div>
-                <div class="heatmap-cell status-green">108%</div>
-                <div class="heatmap-cell status-yellow">92%</div>
-                <div class="heatmap-cell status-green">140%</div>
-                <div class="heatmap-cell status-green">110%</div>
-                <div class="heatmap-cell status-green">160%</div>
-                <div class="heatmap-cell status-yellow">80%</div>
-
-                <!-- AIDS -->
-                <div class="heatmap-cell cell-dept">AIDS</div>
-                <div class="heatmap-cell status-green">102%</div>
-                <div class="heatmap-cell status-green">100%</div>
-                <div class="heatmap-cell status-yellow">88%</div>
-                <div class="heatmap-cell status-green">130%</div>
-                <div class="heatmap-cell status-green">105%</div>
-                <div class="heatmap-cell status-green">140%</div>
-                <div class="heatmap-cell status-yellow">75%</div>
-
-                <!-- MAT -->
-                <div class="heatmap-cell cell-dept">MAT</div>
-                <div class="heatmap-cell status-yellow">98%</div>
-                <div class="heatmap-cell status-green">105%</div>
-                <div class="heatmap-cell status-red">5%</div>
-                <div class="heatmap-cell status-red">10%</div>
-                <div class="heatmap-cell status-yellow">75%</div>
-                <div class="heatmap-cell status-green">125%</div>
-                <div class="heatmap-cell status-red">0%</div>
-
-                <!-- MCA -->
-                <div class="heatmap-cell cell-dept">MCA</div>
-                <div class="heatmap-cell status-yellow">88%</div>
-                <div class="heatmap-cell status-yellow">92%</div>
-                <div class="heatmap-cell status-yellow">60%</div>
-                <div class="heatmap-cell status-yellow">95%</div>
-                <div class="heatmap-cell status-yellow">82%</div>
-                <div class="heatmap-cell status-green">105%</div>
-                <div class="heatmap-cell status-yellow">60%</div>
-
-                <!-- MBA -->
-                <div class="heatmap-cell cell-dept">MBA</div>
-                <div class="heatmap-cell status-yellow">75%</div>
-                <div class="heatmap-cell status-yellow">85%</div>
-                <div class="heatmap-cell status-yellow">70%</div>
-                <div class="heatmap-cell status-green">105%</div>
-                <div class="heatmap-cell status-yellow">72%</div>
-                <div class="heatmap-cell status-yellow">95%</div>
-                <div class="heatmap-cell status-yellow">65%</div>
-
-                <!-- Total Row -->
-                <div class="heatmap-cell cell-dept" style="background: #f1f5f9; font-weight: 800;">Total</div>
-                <div class="heatmap-cell status-green" style="font-weight: 700;">92%</div>
-                <div class="heatmap-cell status-green" style="font-weight: 700;">95%</div>
-                <div class="heatmap-cell status-yellow" style="font-weight: 700;">65%</div>
-                <div class="heatmap-cell status-green" style="font-weight: 700;">108%</div>
-                <div class="heatmap-cell status-yellow" style="font-weight: 700;">85%</div>
-                <div class="heatmap-cell status-green" style="font-weight: 700;">120%</div>
-                <div class="heatmap-cell status-yellow" style="font-weight: 700;">60%</div>
+            <div id="dept-placeholder-msg" style="text-align: center; padding: 40px; color: #94a3b8; font-style: italic;">
+                Please select a department from the dropdown to view its detailed performance.
             </div>
         </div>
     </div>
 
-    <!-- Section 5 & 6: Pending & Insights -->
-    <div class="bottom-viz-grid">
-        <div class="viz-card">
-            <h3><i class="fa-solid fa-triangle-exclamation"></i> Pending Analysis</h3>
-            <div class="pending-list">
-                <div class="pending-item">
-                    <div class="pending-info">
-                        <h4>Pending Papers</h4>
-                        <p>Verification Required</p>
-                    </div>
-                    <div class="pending-value">142</div>
-                </div>
-                <div class="pending-item">
-                    <div class="pending-info">
-                        <h4>Pending Patents</h4>
-                        <p>Awaiting Docs</p>
-                    </div>
-                    <div class="pending-value">38</div>
-                </div>
-                <div class="pending-item">
-                    <div class="pending-info">
-                        <h4>Extension Status</h4>
-                        <p>Critical Delay</p>
-                    </div>
-                    <div class="pending-value">86</div>
-                </div>
+    <!-- 3. Smart Insight Feed -->
+    <div style="margin-bottom: 30px; background: linear-gradient(to right, #1e293b, #0f172a); border-radius: 12px; padding: 16px 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; align-items: center; overflow: hidden;">
+        <div style="color: #38bdf8; font-weight: 700; display: flex; align-items: center; margin-right: 20px; white-space: nowrap;">
+            <i class="fa-solid fa-bolt" style="margin-right: 8px; color: #facc15;"></i> Smart Insights
+        </div>
+        <div style="overflow: hidden; width: 100%;">
+            <div id="smart-insight-ticker" style="display: flex; gap: 40px; animation: ticker 25s linear infinite; white-space: nowrap; color: #e2e8f0; font-size: 0.95rem;">
+                <span><i class="fa-solid fa-spinner fa-spin"></i> Analyzing institutional data...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Row: Heatmap & Financial Chart -->
+    <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 24px; margin-bottom: 24px;">
+        <div class="dash-card" style="background: white; padding: 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid var(--border-main);">
+            <div style="margin-bottom: 15px;">
+                <h3 style="font-size: 1.1rem; color: #1e293b; font-weight: 700; margin-bottom: 5px;"><i class="fa-solid fa-table-cells" style="color: #8b5cf6; margin-right: 8px;"></i> RCPIE Heatmap</h3>
+                <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Departmental category achievement percentages.</p>
+            </div>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: separate; border-spacing: 4px; font-size: 0.85rem; text-align: center;">
+                    <thead>
+                        <tr>
+                            <th style="padding: 8px; color: #64748b; font-weight: 600;">Dept</th>
+                            <th style="padding: 8px; color: #64748b; font-weight: 600;">R</th>
+                            <th style="padding: 8px; color: #64748b; font-weight: 600;">C</th>
+                            <th style="padding: 8px; color: #64748b; font-weight: 600;">P</th>
+                            <th style="padding: 8px; color: #64748b; font-weight: 600;">I</th>
+                            <th style="padding: 8px; color: #64748b; font-weight: 600;">E</th>
+                        </tr>
+                    </thead>
+                    <tbody id="heatmap-tbody"></tbody>
+                </table>
             </div>
         </div>
 
-        <div class="insights-panel">
-            <h3><i class="fa-solid fa-lightbulb"></i> Performance Insights</h3>
-            <div class="insight-item">
-                <div class="insight-icon icon-success"><i class="fa-solid fa-arrow-trend-up"></i></div>
-                <div class="insight-text">
-                    <h4>Innovation Leader</h4>
-                    <p>Innovation category exceeded target by 200% this quarter, driven largely by the AIML and CSE departments.</p>
-                </div>
+        <div class="dash-card" style="background: white; padding: 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid var(--border-main);">
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 1.2rem; color: #1e293b; font-weight: 700; margin-bottom: 5px;"><i class="fa-solid fa-money-bill-trend-up" style="color: #10b981; margin-right: 8px;"></i> Financial Health Streams</h3>
+                <p style="font-size: 0.9rem; color: #64748b; margin: 0;">Sanctioned Proposals & Consultancy Revenue flow.</p>
             </div>
-            <div class="insight-item">
-                <div class="insight-icon icon-warning"><i class="fa-solid fa-circle-exclamation"></i></div>
-                <div class="insight-text">
-                    <h4>IP Alert</h4>
-                    <p>Patents and Copyrights (P) are below 50% target in ECE, EEE, and Mechanical. Research intervention recommended.</p>
-                </div>
+            <div style="height: 300px; width: 100%; margin-bottom: 20px;">
+                <canvas id="financialHealthChart"></canvas>
             </div>
+            <div style="padding-top: 10px;">
+                <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center;"><span style="display: inline-block; width: 8px; height: 8px; background: #ec4899; border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite;"></span> Live Research Pulse</h4>
+                <div id="live-milestone-feed" style="display: flex; gap: 12px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Final Row Charts -->
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 24px;">
+        <div class="dash-card" style="background: white; padding: 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid var(--border-main); display: flex; flex-direction: column;">
+            <div style="margin-bottom: 20px;"><h3 style="font-size: 1.1rem; color: #1e293b; font-weight: 700; margin-bottom: 5px;"><i class="fa-solid fa-spider" style="color: #6366f1; margin-right: 8px;"></i> Performance Matrix</h3></div>
+            <div style="flex-grow: 1; min-height: 280px;"><canvas id="deptRadarChart"></canvas></div>
+        </div>
+        <div class="dash-card" style="background: white; padding: 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid var(--border-main); display: flex; flex-direction: column;">
+            <div style="margin-bottom: 20px;"><h3 style="font-size: 1.1rem; color: #1e293b; font-weight: 700; margin-bottom: 5px;"><i class="fa-solid fa-filter" style="color: #f59e0b; margin-right: 8px;"></i> Success Funnel</h3></div>
+            <div style="flex-grow: 1; min-height: 280px;"><canvas id="proposalFunnelChart"></canvas></div>
+        </div>
+        <div class="dash-card" style="background: white; padding: 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid var(--border-main); display: flex; flex-direction: column;">
+            <div style="margin-bottom: 20px;"><h3 style="font-size: 1.1rem; color: #1e293b; font-weight: 700; margin-bottom: 5px;"><i class="fa-solid fa-rocket" style="color: #ec4899; margin-right: 8px;"></i> Revenue Stars</h3></div>
+            <div style="flex-grow: 1; min-height: 280px;"><canvas id="startupPolarChart"></canvas></div>
         </div>
     </div>
 </div>

@@ -15,7 +15,6 @@
     "cors": "^2.8.6",
     "exceljs": "^4.4.0",
     "express": "^5.2.1",
-    "googleapis": "^171.4.0",
-    "mongoose": "^9.5.0"
+    "googleapis": "^171.4.0"
   }
 }

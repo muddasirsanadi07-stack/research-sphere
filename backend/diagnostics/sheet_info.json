@@ -1,0 +1,362 @@
+{
+  "targ vs ach": {
+    "headers": [
+      "RCPIE Verification Status for AY 24-25",
+      "RCPIE Verification Status for AY 24-25",
+      "RCPIE Verification Status for AY 24-25"
+    ],
+    "subheaders": [
+      "Total Target for AY 2024-25",
+      "Total Target for AY 2024-25",
+      "Total Target for AY 2024-25",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "Consolidated Sheet ": {
+    "headers": [
+      "RCPIE Consolidated Details for AY 24-25",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "subheaders": [
+      "Column1",
+      "Column2",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "Journal_Paper_Conference": {
+    "headers": [
+      {
+        "text": "S.NA.",
+        "hyperlink": "http://s.no/"
+      },
+      "Faculty Involved",
+      "Students Involved",
+      "Department",
+      "NAme of the JourNAl / InterNAtioNAl conference",
+      "Q1/Q2 /Q3/Q4/SCI",
+      "Is it Indexed on WoS",
+      "Title of the paper",
+      "Presented/published in the Month and Year\n(Sep/Oct/NAv/Dec/Jan/Feb)",
+      "ISSN/ISBN Number",
+      "Published proof link (DOI)"
+    ],
+    "subheaders": [
+      1,
+      "Dr MeeNAkshi R Patil, Dr NAveen Kumar G N",
+      "NA",
+      "ECE",
+      "3rd 2024 IEEE World Conference on Applied Intelligence and Computing (AIC  2024)",
+      "NA",
+      "NA",
+      "Comprehensive Assessment of Deep Learning Models for Multi-Disease Detection in Brain MRI Images",
+      "Presented in July 2024",
+      "NA",
+      {
+        "text": "https://drive.google.com/file/d/1C2gdujw-v4ImxGKADA8JiSNAkPe16gWD/view?usp=drive_link",
+        "hyperlink": "https://drive.google.com/file/d/1C2gdujw-v4ImxGKADA8JiSNakPe16gWD/view?usp=drive_link"
+      }
+    ]
+  },
+  "Patents": {
+    "headers": [
+      {
+        "text": {
+          "richText": [
+            {
+              "font": {
+                "bold": true,
+                "underline": true,
+                "size": 11,
+                "color": {
+                  "argb": "FF1155CC"
+                },
+                "name": "Calibri"
+              },
+              "text": "S.No"
+            },
+            {
+              "font": {
+                "bold": true,
+                "size": 11,
+                "color": {
+                  "theme": 1
+                },
+                "name": "Calibri"
+              },
+              "text": "."
+            }
+          ]
+        },
+        "hyperlink": "http://s.no/"
+      },
+      "Patent Application No.",
+      "Status of Patent (Published / Granted)",
+      "Inventor/s Name",
+      "Department",
+      "Title of the Patent",
+      "Applicant/s Name",
+      "Patent Filed Date (DD/MM/YYYY) ",
+      "Patent Published Date / Granted Date (DD/MM/YYYY)",
+      "   Published proof link",
+      null,
+      null
+    ],
+    "subheaders": [
+      1,
+      "422112-001",
+      "Design grant",
+      "Hanumantha Ravi, K.Meenakshi",
+      "Mat",
+      "Educational Toy",
+      "Hanumantha Ravi, K.Meenakshi, CMRIT",
+      45358,
+      45605,
+      {
+        "text": "https://drive.google.com/file/d/1_acHJucvUnNODfV7RmoN_vCDEEQ2-ByU/view?usp=sharing",
+        "hyperlink": "https://drive.google.com/file/d/1_acHJucvUnNODfV7RmoN_vCDEEQ2-ByU/view?usp=sharing"
+      },
+      null,
+      null
+    ]
+  },
+  "Granted Patent": {
+    "headers": [
+      "Granted Patent",
+      null,
+      null,
+      null
+    ],
+    "subheaders": [
+      " Department",
+      "Student Intake",
+      "Target ",
+      "Achieved"
+    ]
+  },
+  "Consultancy": {
+    "headers": [
+      {
+        "text": "S.No",
+        "hyperlink": "http://s.no/"
+      },
+      "Faculty Involved",
+      "Department",
+      "Name/Title of the work",
+      "Funding  Agency",
+      "Registration Amount(If Activity)",
+      "No of Participants (If Applicable)",
+      "Consultancy Amount Generated (Rs.)",
+      "Expenses (Rs.)",
+      "Month and Year\n(Sep/Oct/Nov/Dec/Jan/Feb)",
+      "Receipt Link",
+      null,
+      null,
+      null,
+      null
+    ],
+    "subheaders": [
+      1,
+      "Dr. Viji K",
+      "ECE",
+      "Expert Talk",
+      "AICTE",
+      "NA",
+      "NA",
+      5000,
+      "Nil",
+      "2024-08-01T00:00:00.000Z",
+      {
+        "text": {
+          "richText": [
+            {
+              "font": {
+                "underline": true,
+                "size": 10,
+                "color": {
+                  "argb": "FF1155CC"
+                },
+                "name": "Arial"
+              },
+              "text": "https://drive.google.com/file/d/19VmAhHGER0dnEiFQvEOm9NisTBdfkJHr/view?usp=sharing"
+            },
+            {
+              "font": {
+                "size": 10,
+                "name": "Arial"
+              },
+              "text": " "
+            }
+          ]
+        },
+        "hyperlink": "https://drive.google.com/file/d/19VmAhHGER0dnEiFQvEOm9NisTBdfkJHr/view?usp=sharing"
+      },
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "Proposal": {
+    "headers": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "subheaders": [
+      {
+        "text": "S.No.",
+        "hyperlink": "http://s.no/"
+      },
+      "Dept. ",
+      "Name of Faculty",
+      "Title of the Proposal",
+      "Proposal Amount Submitted\n(write in full digits. e.g. 300000 not as 3L)",
+      "Date of Submission\n(DD-MM-YYYY)",
+      "Application ID",
+      "Agency Name",
+      "Agency Type",
+      "Current status",
+      "Sanctioned Amount",
+      "Amount Received",
+      "Remarks",
+      "Sanctioned letter",
+      null
+    ]
+  },
+  "Entrepreneurship": {
+    "headers": [
+      {
+        "text": "S.No",
+        "hyperlink": "http://s.no/"
+      },
+      "Faculty Involved",
+      "Department",
+      "Startup Initiated",
+      "Registration Amount per head (If Event)",
+      "No of Participants (If Applicable)",
+      "Revenue Generation through Start-up (Rs.)",
+      "Expenses(Rs.)",
+      "Name of the Training Program",
+      "Published / Filed Month and year\n(Sep/Oct/Nov/Dec/Jan/Feb)",
+      "Receipt Link",
+      null,
+      null,
+      null,
+      null
+    ],
+    "subheaders": [
+      1,
+      "K Komala Devi",
+      "ISE",
+      "FDP - 5 Days Online FDP on Data Analysisand Visualization with Power Bi & Tableu-EDUCAST",
+      "Rs. 300",
+      153,
+      23050,
+      "Nil",
+      "FDP - 5 Days Online FDP on Data Analysisand Visualization with Power Bi & Tableu",
+      "2024-09-01T00:00:00.000Z",
+      {
+        "text": "2024-Sep-ISE-C001(KomalaDevi Rs.23050/-  &  Abhijith Rs.23050/- )",
+        "hyperlink": "https://drive.google.com/drive/folders/1PLRhVSSCZco4J08ri0NUzQI8WALZvImm?usp=drive_link"
+      },
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "Incentives": {
+    "headers": [
+      "Number of teachers provided with financial support to attend conferences/workshops and towards membership fee of professional bodies during the year\n\n                 ",
+      "Number of teachers provided with financial support to attend conferences/workshops and towards membership fee of professional bodies during the year\n\n                 ",
+      "Number of teachers provided with financial support to attend conferences/workshops and towards membership fee of professional bodies during the year\n\n                 ",
+      "Number of teachers provided with financial support to attend conferences/workshops and towards membership fee of professional bodies during the year\n\n                 ",
+      "Number of teachers provided with financial support to attend conferences/workshops and towards membership fee of professional bodies during the year\n\n                 ",
+      "Number of teachers provided with financial support to attend conferences/workshops and towards membership fee of professional bodies during the year\n\n                 ",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "subheaders": [
+      "Incentives Details AY 2024-25",
+      "Incentives Details AY 2024-25",
+      "Incentives Details AY 2024-25",
+      "Incentives Details AY 2024-25",
+      "Incentives Details AY 2024-25",
+      "Incentives Details AY 2024-25",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "Students Publications": {
+    "headers": [],
+    "subheaders": [
+      null,
+      "Students Publications",
+      "Students Publications",
+      "Students Publications",
+      "Students Publications"
+    ]
+  }
+}
