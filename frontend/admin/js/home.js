@@ -15,7 +15,7 @@ if (document.getElementById('journalCount')) startHomeLogic();
 
 async function fetchLocalData() {
     try {
-        const response = await fetch('http://localhost:5005/api/consolidated-stats');
+        const response = await fetch('/api/consolidated-stats');
         const data = await response.json();
         
         // Map Nested Stats to UI
@@ -97,7 +97,7 @@ async function saveEdit(el, newValue) {
     const unit = el.dataset.unit;
 
     try {
-        const response = await fetch('http://localhost:5005/api/update', {
+        const response = await fetch('/api/update', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ category, metric, newValue })

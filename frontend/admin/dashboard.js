@@ -131,7 +131,7 @@ async function loadPartials() {
 
 async function fetchAndPopulateDashboardStats() {
     try {
-        const response = await fetch('http://localhost:5005/api/consolidated-stats');
+        const response = await fetch('/api/consolidated-stats');
         const data = await response.json();
         
         // Research Papers
@@ -181,13 +181,13 @@ async function initAdvancedAnalytics() {
     try {
         // 1. Fetch Data Concurrently
         const [consultancyRes, proposalsRes, consolidatedRes, studentRes, targetRes, entRes, milesRes] = await Promise.all([
-            fetch('http://localhost:5005/api/consultancy').catch(() => null),
-            fetch('http://localhost:5005/api/proposals').catch(() => null),
-            fetch('http://localhost:5005/api/consolidated-stats').catch(() => null),
-            fetch('http://localhost:5005/api/student-pubs').catch(() => null),
-            fetch('http://localhost:5005/api/target-achieved').catch(() => null),
-            fetch('http://localhost:5005/api/entrepreneurship').catch(() => null),
-            fetch('http://localhost:5005/api/recent-milestones').catch(() => null)
+            fetch('/api/consultancy').catch(() => null),
+            fetch('/api/proposals').catch(() => null),
+            fetch('/api/consolidated-stats').catch(() => null),
+            fetch('/api/student-pubs').catch(() => null),
+            fetch('/api/target-achieved').catch(() => null),
+            fetch('/api/entrepreneurship').catch(() => null),
+            fetch('/api/recent-milestones').catch(() => null)
         ]);
 
         const consultancyData = consultancyRes && consultancyRes.ok ? await consultancyRes.json() : [];

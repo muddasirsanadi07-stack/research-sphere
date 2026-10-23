@@ -97,6 +97,74 @@ const findRowByKeyword = (sheet, keyword, startRow = 1) => {
     return -1;
 };
 
+// ✅ GET landing page stats
+app.get("/api/stats", async (req, res) => {
+    try {
+        const workbook = new ExcelJS.Workbook();
+        await workbook.xlsx.readFile(DB_PATH);
+        
+        let publications = 150;
+        let grants = 40;
+        let innovation = 90;
+
+        const paperSheet = workbook.getWorksheet('Journal_Paper_Conference');
+        if (paperSheet) {
+            let count = 0;
+            paperSheet.eachRow((row, rowNumber) => {
+                if (rowNumber > 1) count++;
+            });
+            if (count > 0) publications = count;
+        }
+
+        const patentSheet = workbook.getWorksheet('Patents');
+        if (patentSheet) {
+            const h = findHeaders(patentSheet, 1, { status: ["status"] });
+            let grantedCount = 0;
+            patentSheet.eachRow((row, rowNumber) => {
+                if (rowNumber === 1) return;
+                const status = extractText(row.getCell(h.status || 3)).toLowerCase();
+                if (status.includes("grant") || status.includes("verify")) grantedCount++;
+            });
+            if (grantedCount > 0) grants = grantedCount;
+        }
+
+        const targetAchievedSheet = workbook.getWorksheet('targ vs ach');
+        if (targetAchievedSheet) {
+            const targetRow = findRowByKeyword(targetAchievedSheet, "Total Target");
+            const achievedRow = findRowByKeyword(targetAchievedSheet, "Target Achieved");
+            let totalTarget = 0;
+            let totalAchieved = 0;
+            if (targetRow > 0) {
+                for (let i = targetRow + 2; i < targetRow + 20; i++) {
+                    const row = targetAchievedSheet.getRow(i);
+                    const dept = extractText(row.getCell(1));
+                    if (!dept || dept === "" || dept.toLowerCase() === "total" || dept.toLowerCase().includes("achieved")) break;
+                    for (let col = 2; col <= 8; col++) totalTarget += extractValue(row.getCell(col));
+                }
+            }
+            if (achievedRow > 0) {
+                for (let i = achievedRow + 2; i < achievedRow + 20; i++) {
+                    const row = targetAchievedSheet.getRow(i);
+                    const dept = extractText(row.getCell(1));
+                    if (!dept || dept === "" || dept.toLowerCase() === "total" || dept.toLowerCase().includes("achieved in %")) break;
+                    for (let col = 2; col <= 8; col++) totalAchieved += extractValue(row.getCell(col));
+                }
+            }
+            if (totalTarget > 0) {
+                innovation = Math.round((totalAchieved / totalTarget) * 100);
+            }
+        }
+
+        res.json({
+            publications: publications,
+            grants: grants,
+            innovation: innovation
+        });
+    } catch (err) {
+        res.json({ publications: 150, grants: 40, innovation: 90 });
+    }
+});
+
 // ✅ GET Consolidated Stats for Repository Hub
 app.get("/api/repo-stats", async (req, res) => {
     try {

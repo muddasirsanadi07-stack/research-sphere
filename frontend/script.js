@@ -60,7 +60,7 @@ async function loadStats() {
     if (!pubEl || !grantEl || !innovationEl) return;
 
     try {
-        const response = await fetch("http://localhost:5000/api/stats");
+        const response = await fetch("/api/stats");
 
         if (!response.ok) throw new Error("API not responding");
 

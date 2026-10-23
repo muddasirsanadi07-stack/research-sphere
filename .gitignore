@@ -3,3 +3,4 @@ node_modules/
 backend/sheets/database.xlsx (if it still exists)
 *.log
 .env
+sheets/

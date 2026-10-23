@@ -122,7 +122,7 @@ async function loadCategory(catId) {
 
 async function refreshHubStats() {
     try {
-        const response = await fetch('http://localhost:5005/api/repo-stats');
+        const response = await fetch('/api/repo-stats');
         const stats = await response.json();
         const mappings = {
             '.hub-total-records': stats.total,
@@ -274,7 +274,7 @@ async function fetchAndRenderPublications() {
     if (!listContainer) return;
 
     try {
-        const response = await fetch('http://localhost:5005/api/publications');
+        const response = await fetch('/api/publications');
         currentData = await response.json();
         
         initCategoryCharts('journals', currentData);
@@ -370,7 +370,7 @@ async function fetchAndRenderPatents() {
     if (!listContainer) return;
 
     try {
-        const response = await fetch('http://localhost:5005/api/patents');
+        const response = await fetch('/api/patents');
         currentData = await response.json();
         
         initCategoryCharts('patents', currentData);
@@ -457,11 +457,11 @@ async function fetchAndRenderGrantedPatentTargets() {
 
     try {
         // Fetch Top Table Data
-        const topRes = await fetch('http://localhost:5005/api/granted-patent-targets');
+        const topRes = await fetch('/api/granted-patent-targets');
         const topData = await topRes.json();
         
         // Fetch Bottom Table Data
-        const bottomRes = await fetch('http://localhost:5005/api/department-achievements');
+        const bottomRes = await fetch('/api/department-achievements');
         const bottomData = await bottomRes.json();
 
         initCategoryCharts('granted', bottomData); // Use bottomData for Consultancy chart
@@ -564,7 +564,7 @@ async function fetchAndRenderProposals() {
     if (!listContainer) return;
 
     try {
-        const response = await fetch('http://localhost:5005/api/proposals');
+        const response = await fetch('/api/proposals');
         currentData = await response.json();
 
         initCategoryCharts('proposals', currentData);
@@ -672,7 +672,7 @@ async function fetchAndRenderConsultancy() {
     const listContainer = document.querySelector('.repo-data-list');
     if (!listContainer) return;
     try {
-        const response = await fetch('http://localhost:5005/api/consultancy');
+        const response = await fetch('/api/consultancy');
         currentData = await response.json();
         initCategoryCharts('consultancy', currentData);
         renderConsultancyTable(currentData);
@@ -757,7 +757,7 @@ async function fetchAndRenderEntrepreneurship() {
     const listContainer = document.querySelector('.repo-data-list');
     if (!listContainer) return;
     try {
-        const response = await fetch('http://localhost:5005/api/entrepreneurship');
+        const response = await fetch('/api/entrepreneurship');
         currentData = await response.json();
         initCategoryCharts('entrepreneur', currentData);
         renderEntrepreneurshipTable(currentData);
@@ -842,7 +842,7 @@ async function fetchAndRenderIncentives() {
     const listContainer = document.querySelector('.repo-data-list');
     if (!listContainer) return;
     try {
-        const response = await fetch('http://localhost:5005/api/incentives');
+        const response = await fetch('/api/incentives');
         currentData = await response.json();
         initCategoryCharts('incentives', currentData);
         renderIncentivesTable(currentData);
@@ -925,7 +925,7 @@ async function fetchAndRenderStudentPubs() {
     const listContainer = document.querySelector('.repo-data-list');
     if (!listContainer) return;
     try {
-        const response = await fetch('http://localhost:5005/api/student-pubs');
+        const response = await fetch('/api/student-pubs');
         currentData = await response.json();
         initCategoryCharts('students', currentData);
         renderStudentPubsTable(currentData);

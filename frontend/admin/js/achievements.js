@@ -6,7 +6,7 @@
 async function initAchievementsView() {
     console.log("Initializing Achievements View...");
     try {
-        const response = await fetch('http://localhost:5005/api/achievement-stats');
+        const response = await fetch('/api/achievement-stats');
         if (!response.ok) throw new Error("Failed to fetch achievement stats");
         
         const data = await response.json();
